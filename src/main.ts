@@ -1,11 +1,24 @@
-export const delayMillis = (delayMs: number): Promise<void> =>
-  new Promise((resolve) => setTimeout(resolve, delayMs));
+class Human {
+  fullName: string;
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public favoriteColor: string
+  ) {
+    this.fullName = `${firstName} ${lastName}`;
+    this.favoriteColor = favoriteColor;
+  }
+}
 
-export const greet = (name: string): string => `Hello ${name}`;
+interface Person {
+  firstName: string;
+  lastName: string;
+}
 
-export const foo = async (): Promise<boolean> => {
-  console.log(greet('World'));
-  await delayMillis(1000);
-  console.log('done');
-  return true;
-};
+function helloWorld(person: Person) {
+  return `Hello ${person.firstName}`;
+}
+
+let user = { firstName: 'Eleni', lastName: 'Papanicolas' };
+
+console.log(helloWorld(user));
