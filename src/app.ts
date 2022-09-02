@@ -5,7 +5,7 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
-import { UserController } from './user.controller';
+import { UserController } from './controllers/user.controller';
 import { UserService } from './services/user.service';
 
 class App {
