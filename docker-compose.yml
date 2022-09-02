@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: app-backend-container
+    build: .
+    environment:
+      - MONGO_URI=mongodb+srv://eleni_papanicolas:yRXgWBON1n6eJlcLbCBi@cluster0.3quwk.mongodb.net/?retryWrites=true&w=majority
+    ports:
+      - 8990:8990
+
+  db:
+    container_name: app-mongoDB-container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./appData:/data/db
+    ports:
+      - 27017:27017
