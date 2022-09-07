@@ -4,14 +4,3 @@ services:
     build: .
     ports:
       - '8990:8990'
-
-  db:
-    build: .
-    volumes:
-      - db-data:/db/data
-    ports:
-      - '27017:27017'
-
-volumes:
-  db-data:
-    name: 'app-db-data'
