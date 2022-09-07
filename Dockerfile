@@ -9,4 +9,4 @@ COPY . .
 
 # Expose port and run the node script
 EXPOSE 8990
-CMD npm run start:dev
+CMD ["npm", "run", "start:dev"]
