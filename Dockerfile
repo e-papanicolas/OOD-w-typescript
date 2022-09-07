@@ -1,6 +1,6 @@
 # DockerFile for Node
 FROM node:18.7.0
-
+LABEL description="Practice working with Docker and OOD with TypeScript"
 
 # Copy the source code to the server
 COPY package*.json ./
@@ -9,4 +9,5 @@ COPY . .
 
 # Expose port and run the node script
 EXPOSE 8990
-CMD ["npm", "run", "start:dev"]
+ENTRYPOINT ["npm", "run"]
+CMD ["start:dev"]
