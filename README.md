@@ -4,7 +4,7 @@
 
 This application is practice using object oriented design with TypeScript.
 
-Run `docker compose up --build` to get started with the Docker container. This will manage installing all of the dependencies, starting the development server, and connecting to the database.
+Run `docker compose up` to get started with the Docker container. This will manage installing all of the dependencies, starting the development server, and connecting to the database.
 
 ### Technologies
 
