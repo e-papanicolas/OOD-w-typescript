@@ -4,7 +4,7 @@ FROM node:18.7.0
 
 # Copy the source code to the server
 COPY package*.json ./
-RUN npm install
+RUN ["npm", "install"]
 COPY . .
 
 # Expose port and run the node script
