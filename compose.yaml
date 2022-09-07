@@ -1,17 +1,17 @@
 services:
   server:
-    container_name: server
+    env_file: .env
     build: .
-    environment:
-      - MONGO_URI=${MONGO_URI}
     ports:
-      - 8990:8990
+      - '8990:8990'
 
   db:
-    container_name: mongo-db
-    image: mongo-db
-    restart: always
+    build: .
     volumes:
-      - ./appData:/data/db
+      - db-data:/db/data
     ports:
-      - 27017:27017
+      - '27017:27017'
+
+volumes:
+  db-data:
+    name: 'app-db-data'

@@ -7,6 +7,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-# Expose port 8080 and run the node script
+# Expose port and run the node script
 EXPOSE 8990
 CMD npm run start:dev
